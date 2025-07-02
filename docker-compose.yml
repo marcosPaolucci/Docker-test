@@ -1,0 +1,11 @@
+services:
+  escola-api:
+    build: .
+    container_name: escola-api-container
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
